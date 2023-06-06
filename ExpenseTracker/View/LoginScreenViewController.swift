@@ -15,11 +15,11 @@ class LoginScreenViewController: UIViewController {
     }
     
     @IBAction func SignInButtonPressed(_ sender: Any) {
-        performSegue(withIdentifier: "SignInScreen", sender: self)
+        
     }
     
     @IBAction func SignUpButtonPressed(_ sender: Any) {
-        performSegue(withIdentifier: "SignUpScreen", sender: self)
+        
     }
     
 }

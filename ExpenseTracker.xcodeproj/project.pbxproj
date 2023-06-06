@@ -17,9 +17,20 @@
 		ECB05E352A29F1F90060A250 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB05E342A29F1F90060A250 /* SignInViewController.swift */; };
 		ECB05E372A29F1FE0060A250 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB05E362A29F1FE0060A250 /* SignUpViewController.swift */; };
 		ECB05E392A29F2090060A250 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB05E382A29F2090060A250 /* MainViewController.swift */; };
+		ECB05E3E2A2CB8590060A250 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ECB05E3D2A2CB8590060A250 /* GoogleService-Info.plist */; };
+		ECBC1EE82A2CE0F800829C95 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = ECBC1EE72A2CE0F800829C95 /* FirebaseAnalytics */; };
+		ECBC1EEA2A2CE0F800829C95 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = ECBC1EE92A2CE0F800829C95 /* FirebaseAuth */; };
+		ECBC1EEC2A2CE0F800829C95 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = ECBC1EEB2A2CE0F800829C95 /* FirebaseCrashlytics */; };
+		ECBC1EEE2A2CE0F800829C95 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = ECBC1EED2A2CE0F800829C95 /* FirebaseDatabase */; };
+		ECBC1EF22A2F3A7200829C95 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBC1EF12A2F3A7200829C95 /* AuthViewModel.swift */; };
+		ECBC1EF42A2F3AB000829C95 /* AuthServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBC1EF32A2F3AB000829C95 /* AuthServiceProtocol.swift */; };
+		ECBC1EF62A2F3B3900829C95 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBC1EF52A2F3B3900829C95 /* User.swift */; };
+		ECBC1EF82A2F3BF600829C95 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBC1EF72A2F3BF600829C95 /* AuthService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D40B5E6C00462BC07C907B0 /* Pods-ExpenseTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExpenseTracker.debug.xcconfig"; path = "Target Support Files/Pods-ExpenseTracker/Pods-ExpenseTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		C02CCB76772FDF4BF9428697 /* Pods-ExpenseTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExpenseTracker.release.xcconfig"; path = "Target Support Files/Pods-ExpenseTracker/Pods-ExpenseTracker.release.xcconfig"; sourceTree = "<group>"; };
 		ECB05E152A25E0050060A250 /* ExpenseTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpenseTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECB05E182A25E0050060A250 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECB05E1A2A25E0050060A250 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +43,11 @@
 		ECB05E342A29F1F90060A250 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		ECB05E362A29F1FE0060A250 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		ECB05E382A29F2090060A250 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		ECB05E3D2A2CB8590060A250 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ECBC1EF12A2F3A7200829C95 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		ECBC1EF32A2F3AB000829C95 /* AuthServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceProtocol.swift; sourceTree = "<group>"; };
+		ECBC1EF52A2F3B3900829C95 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		ECBC1EF72A2F3BF600829C95 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +55,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECBC1EEE2A2CE0F800829C95 /* FirebaseDatabase in Frameworks */,
+				ECBC1EE82A2CE0F800829C95 /* FirebaseAnalytics in Frameworks */,
+				ECBC1EEC2A2CE0F800829C95 /* FirebaseCrashlytics in Frameworks */,
+				ECBC1EEA2A2CE0F800829C95 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		47481CD33BC6B4B0E623E587 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E026890D5338CC9330256ACA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2D40B5E6C00462BC07C907B0 /* Pods-ExpenseTracker.debug.xcconfig */,
+				C02CCB76772FDF4BF9428697 /* Pods-ExpenseTracker.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		ECB05E0C2A25E0050060A250 = {
 			isa = PBXGroup;
 			children = (
 				ECB05E172A25E0050060A250 /* ExpenseTracker */,
+				47481CD33BC6B4B0E623E587 /* Frameworks */,
 				ECB05E162A25E0050060A250 /* Products */,
+				E026890D5338CC9330256ACA /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,13 +102,11 @@
 		ECB05E172A25E0050060A250 /* ExpenseTracker */ = {
 			isa = PBXGroup;
 			children = (
+				ECB05E292A25E0070060A250 /* Info.plist */,
+				ECB05E3C2A2CB81D0060A250 /* Resources */,
 				ECB05E312A25E0C00060A250 /* View */,
 				ECB05E2F2A25E0AE0060A250 /* Model */,
 				ECB05E302A25E0B50060A250 /* ViewModel */,
-				ECB05E182A25E0050060A250 /* AppDelegate.swift */,
-				ECB05E1A2A25E0050060A250 /* SceneDelegate.swift */,
-				ECB05E242A25E0070060A250 /* Assets.xcassets */,
-				ECB05E292A25E0070060A250 /* Info.plist */,
 				ECB05E212A25E0050060A250 /* ExpenseTracker.xcdatamodeld */,
 			);
 			path = ExpenseTracker;
@@ -79,6 +115,7 @@
 		ECB05E2F2A25E0AE0060A250 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				ECBC1EF52A2F3B3900829C95 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -86,6 +123,9 @@
 		ECB05E302A25E0B50060A250 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				ECBC1EF12A2F3A7200829C95 /* AuthViewModel.swift */,
+				ECBC1EF32A2F3AB000829C95 /* AuthServiceProtocol.swift */,
+				ECBC1EF72A2F3BF600829C95 /* AuthService.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -103,6 +143,17 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		ECB05E3C2A2CB81D0060A250 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ECB05E182A25E0050060A250 /* AppDelegate.swift */,
+				ECB05E1A2A25E0050060A250 /* SceneDelegate.swift */,
+				ECB05E242A25E0070060A250 /* Assets.xcassets */,
+				ECB05E3D2A2CB8590060A250 /* GoogleService-Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -110,6 +161,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ECB05E2C2A25E0070060A250 /* Build configuration list for PBXNativeTarget "ExpenseTracker" */;
 			buildPhases = (
+				19F074E0913E457E65BDB164 /* [CP] Check Pods Manifest.lock */,
 				ECB05E112A25E0050060A250 /* Sources */,
 				ECB05E122A25E0050060A250 /* Frameworks */,
 				ECB05E132A25E0050060A250 /* Resources */,
@@ -119,6 +171,12 @@
 			dependencies = (
 			);
 			name = ExpenseTracker;
+			packageProductDependencies = (
+				ECBC1EE72A2CE0F800829C95 /* FirebaseAnalytics */,
+				ECBC1EE92A2CE0F800829C95 /* FirebaseAuth */,
+				ECBC1EEB2A2CE0F800829C95 /* FirebaseCrashlytics */,
+				ECBC1EED2A2CE0F800829C95 /* FirebaseDatabase */,
+			);
 			productName = ExpenseTracker;
 			productReference = ECB05E152A25E0050060A250 /* ExpenseTracker.app */;
 			productType = "com.apple.product-type.application";
@@ -147,6 +205,9 @@
 				Base,
 			);
 			mainGroup = ECB05E0C2A25E0050060A250;
+			packageReferences = (
+				ECBC1EE62A2CE0F800829C95 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = ECB05E162A25E0050060A250 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -164,10 +225,36 @@
 				ECB05E282A25E0070060A250 /* LaunchScreen.storyboard in Resources */,
 				ECB05E252A25E0070060A250 /* Assets.xcassets in Resources */,
 				ECB05E202A25E0050060A250 /* Main.storyboard in Resources */,
+				ECB05E3E2A2CB8590060A250 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		19F074E0913E457E65BDB164 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ExpenseTracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ECB05E112A25E0050060A250 /* Sources */ = {
@@ -179,7 +266,11 @@
 				ECB05E352A29F1F90060A250 /* SignInViewController.swift in Sources */,
 				ECB05E1B2A25E0050060A250 /* SceneDelegate.swift in Sources */,
 				ECB05E232A25E0050060A250 /* ExpenseTracker.xcdatamodeld in Sources */,
+				ECBC1EF82A2F3BF600829C95 /* AuthService.swift in Sources */,
+				ECBC1EF22A2F3A7200829C95 /* AuthViewModel.swift in Sources */,
 				ECB05E332A29EFA40060A250 /* LoginScreenViewController.swift in Sources */,
+				ECBC1EF42A2F3AB000829C95 /* AuthServiceProtocol.swift in Sources */,
+				ECBC1EF62A2F3B3900829C95 /* User.swift in Sources */,
 				ECB05E392A29F2090060A250 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,6 +413,7 @@
 		};
 		ECB05E2D2A25E0070060A250 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D40B5E6C00462BC07C907B0 /* Pods-ExpenseTracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -349,6 +441,7 @@
 		};
 		ECB05E2E2A25E0070060A250 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C02CCB76772FDF4BF9428697 /* Pods-ExpenseTracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -396,6 +489,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ECBC1EE62A2CE0F800829C95 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ECBC1EE72A2CE0F800829C95 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECBC1EE62A2CE0F800829C95 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		ECBC1EE92A2CE0F800829C95 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECBC1EE62A2CE0F800829C95 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		ECBC1EEB2A2CE0F800829C95 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECBC1EE62A2CE0F800829C95 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		ECBC1EED2A2CE0F800829C95 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECBC1EE62A2CE0F800829C95 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		ECB05E212A25E0050060A250 /* ExpenseTracker.xcdatamodeld */ = {

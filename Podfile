@@ -2,9 +2,9 @@
 # platform :ios, '9.0'
 
 target 'ExpenseTracker' do
-  # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
-
-  # Pods for ExpenseTracker
-
+pod 'Appirater'  
+pod 'Firebase/Core'
+pod 'Firebase/Auth'
+pod 'Firebase/Database'
+pod 'Firebase/Analytics'   
 end

@@ -9,23 +9,20 @@ import UIKit
 
 class SignInViewController: UIViewController {
 
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func emailTextField(_ sender: Any) {
-    }
-    
-    @IBAction func passwordTextField(_ sender: Any) {
-    }
-    
     @IBAction func loginButtonPressed(_ sender: Any) {
         
     }
     @IBAction func signUpButtonPressed(_ sender: Any) {
-        performSegue(withIdentifier: "SignInScreen", sender: self)
+        
     }
     
 }
