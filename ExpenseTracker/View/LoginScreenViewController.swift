@@ -14,12 +14,5 @@ class LoginScreenViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func SignInButtonPressed(_ sender: Any) {
-        
-    }
-    
-    @IBAction func SignUpButtonPressed(_ sender: Any) {
-        
-    }
     
 }

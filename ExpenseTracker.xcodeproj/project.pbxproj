@@ -26,6 +26,8 @@
 		ECBC1EF42A2F3AB000829C95 /* AuthServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBC1EF32A2F3AB000829C95 /* AuthServiceProtocol.swift */; };
 		ECBC1EF62A2F3B3900829C95 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBC1EF52A2F3B3900829C95 /* User.swift */; };
 		ECBC1EF82A2F3BF600829C95 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBC1EF72A2F3BF600829C95 /* AuthService.swift */; };
+		ECBC1EFA2A2F411400829C95 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBC1EF92A2F411400829C95 /* LoginViewModel.swift */; };
+		ECBC1EFC2A2F414300829C95 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBC1EFB2A2F414300829C95 /* Dynamic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		ECBC1EF32A2F3AB000829C95 /* AuthServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceProtocol.swift; sourceTree = "<group>"; };
 		ECBC1EF52A2F3B3900829C95 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		ECBC1EF72A2F3BF600829C95 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		ECBC1EF92A2F411400829C95 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		ECBC1EFB2A2F414300829C95 /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +130,8 @@
 				ECBC1EF12A2F3A7200829C95 /* AuthViewModel.swift */,
 				ECBC1EF32A2F3AB000829C95 /* AuthServiceProtocol.swift */,
 				ECBC1EF72A2F3BF600829C95 /* AuthService.swift */,
+				ECBC1EF92A2F411400829C95 /* LoginViewModel.swift */,
+				ECBC1EFB2A2F414300829C95 /* Dynamic.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -261,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECBC1EFC2A2F414300829C95 /* Dynamic.swift in Sources */,
 				ECB05E372A29F1FE0060A250 /* SignUpViewController.swift in Sources */,
 				ECB05E192A25E0050060A250 /* AppDelegate.swift in Sources */,
 				ECB05E352A29F1F90060A250 /* SignInViewController.swift in Sources */,
@@ -269,6 +276,7 @@
 				ECBC1EF82A2F3BF600829C95 /* AuthService.swift in Sources */,
 				ECBC1EF22A2F3A7200829C95 /* AuthViewModel.swift in Sources */,
 				ECB05E332A29EFA40060A250 /* LoginScreenViewController.swift in Sources */,
+				ECBC1EFA2A2F411400829C95 /* LoginViewModel.swift in Sources */,
 				ECBC1EF42A2F3AB000829C95 /* AuthServiceProtocol.swift in Sources */,
 				ECBC1EF62A2F3B3900829C95 /* User.swift in Sources */,
 				ECB05E392A29F2090060A250 /* MainViewController.swift in Sources */,
