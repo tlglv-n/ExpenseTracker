@@ -12,6 +12,16 @@ import CoreData
 class MainViewModel: CoreDataCRUDProtocol {
     var expenses: [Expense]?
     
+    var totalIncomeSum: Double {
+        let incomeExpenses = expenses?.filter { $0.expenseSum ?? 0 >= 0 }
+        return incomeExpenses?.reduce(0, { $0 + ($1.expenseSum ?? 0) }) ?? 0
+    }
+    
+    var totalOutcomeSum: Double {
+        let outcomeExpenses = expenses?.filter { $0.expenseSum ?? 0 < 0 }
+        return outcomeExpenses?.reduce(0, { $0 + ($1.expenseSum ?? 0) }) ?? 0
+    }
+    
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     func fetchData(tableViewHandler handler: @escaping () -> ()) {

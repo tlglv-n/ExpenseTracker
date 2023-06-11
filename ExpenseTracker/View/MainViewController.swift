@@ -18,7 +18,8 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initialState()
-        
+        incomeLabel.text = String(viewModel.totalIncomeSum)
+        outcomeLabel.text = String(viewModel.totalOutcomeSum)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -76,7 +77,6 @@ class MainViewController: UIViewController {
     @IBAction func settingsButtonPressed(_ sender: Any) {
     }
     
-
 }
 
 extension MainViewController: UITableViewDataSource {
