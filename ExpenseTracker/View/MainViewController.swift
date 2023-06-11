@@ -14,6 +14,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     let viewModel = MainViewModel()
+    let authViewModel = AuthViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,6 +76,14 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func settingsButtonPressed(_ sender: Any) {
+        authViewModel.logout()
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginScreenViewController") as! LoginScreenViewController
+        
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+           let sceneDelegate = windowScene.delegate as? SceneDelegate {
+            sceneDelegate.window?.rootViewController = loginViewController
+        }
     }
     
 }
