@@ -13,19 +13,64 @@ class MainViewController: UIViewController {
     @IBOutlet weak var outcomeLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    var expenses: [Expense] = []
+    let viewModel = MainViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        initialState()
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        fetchViewModel()
+    }
+    
     private func initialState() {
+        tableView?.register(ExpenseCell.self)
         tableView?.dataSource = self
+        tableView?.delegate = self
+        fetchViewModel()
+    }
+    
+    private func fetchViewModel() {
+        viewModel.fetchData {
+            self.tableView.reloadData()
+        }
     }
     
     @IBAction func addExpenseButtonPressed(_ sender: Any) {
+        let alertController = UIAlertController(title: "Add expense", message: nil, preferredStyle: .alert)
+        
+        let datePicker = UIDatePicker()
+        datePicker.datePickerMode = .date
+        alertController.view.addSubview(datePicker)
+        
+        alertController.addTextField() {(textField) in
+            textField.placeholder = "Title"
+        }
+        alertController.addTextField() { (textField) in
+            textField.placeholder = "Amount"
+            textField.keyboardType = .decimalPad
+        }
+        
+        alertController.addAction(UIAlertAction(title: "OK", style: .default) { _ in
+
+            let titleTextField = alertController.textFields?[0]
+            let expenseSumTextField = alertController.textFields?[1]
+            let date = datePicker.date
+            
+            if let title = titleTextField?.text, let expenseSumText = expenseSumTextField?.text,
+                let expenseSum = Double(expenseSumText) {
+                self.viewModel.addData(title: title, date: date, expenseSum: expenseSum) {
+                    self.tableView?.reloadData()
+                }
+            } else {
+                print("Error alert")
+            }
+        })
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        present(alertController, animated: true)
     }
     
     @IBAction func settingsButtonPressed(_ sender: Any) {
@@ -36,28 +81,39 @@ class MainViewController: UIViewController {
 
 extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return expenses.count
+        return viewModel.expenses?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(ExpenseCell.self, for: indexPath)
-        let expense = expenses[indexPath.row]
+        let expense = viewModel.expenses?[indexPath.row]
         
-        cell.titleLabel?.text = expense.title
+        cell.titleLabel?.text = expense?.title
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .short
-        if let date = expense.date {
+        if let date = expense?.date {
             cell.dateLabel?.text = dateFormatter.string(from: date)
         } else {
             cell.dateLabel?.text = ""
         }
         
-        let expenseString = String(expense.expenseSum)
+        let expenseString = String(expense?.expenseSum ?? 0)
         cell.expenseLabel?.text = expenseString
         
-        
         return cell
+    }
+}
+
+extension MainViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let action = UIContextualAction(style: .destructive, title: "Delete") { action, view, completionHandler in
+            self.viewModel.removeData(atIndexPath: indexPath) {
+                self.tableView.reloadData()
+            }
+        }
+        
+        return UISwipeActionsConfiguration(actions: [action])
     }
 }
 
